@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ArtworkDTO.ArtworksDTO>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Artwork";
 }
 
 <head>
@@ -210,7 +210,7 @@
                         <div class="collapse" id="sidebarDashboards">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="index">Trang chủ</a>
+                                    <a href="Home">Trang chủ</a>
                                 </li>
                             </ul>
                         </div>
@@ -235,22 +235,22 @@
                         <div class="collapse" id="sidebarEcommerce">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="products">Artist</a>
+                                    <a href="Artist">Artist</a>
                                 </li>
                                 <li>
-                                    <a href="orders">Artwork</a>
+                                    <a href="Artwork">Artwork</a>
                                 </li>
                                 <li>
-                                    <a href="customers">Feedback</a>
+                                    <a href="Feedback">Feedback</a>
                                 </li>
                                 <li>
-                                    <a href="customers">News</a>
+                                    <a href="News">News</a>
                                 </li>
                                 <li>
-                                    <a href="customers">Order</a>
+                                    <a href="Order">Order</a>
                                 </li>
                                 <li>
-                                    <a href="customers">User</a>
+                                    <a href="User">User</a>
                                 </li>
                     </li>
                 </ul>
@@ -282,7 +282,7 @@
             <div class="clearfix"></div>
         </div>
         </div>
-    <!-- ========== Left Sidebar End ========== -->
+        <!-- ========== Left Sidebar End ========== -->
 
     <div class="content-page">
         <div class="content">
@@ -296,8 +296,8 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item">Quản lý Artist</a></li>
-                                    <li class="breadcrumb-item active"><a href="#">Artist</a></li>
+                                    <li class="breadcrumb-item">Quản lý</a></li>
+                                    <li class="breadcrumb-item active"><a href="#">Artwork</a></li>
                                 </ol>
                             </div>
                             <h4 class="page-title">Artist</h4>
@@ -330,7 +330,7 @@
                                                 <th>Tiêu đề</th>
                                                 <th>Mô tả</th>
                                                 <th>Danh mục</th>
-                                                <th>Giá cả<th>
+                                                <th>Giá cả</th>
                                                 <th>Ngày đăng</th>
                                                 <th style="width: 85px;">Hành động</th>
                                             </tr>
@@ -366,7 +366,6 @@
                                                         @Html.DisplayFor(modelItem => item.DateUploaded)
                                                     </td>
                                                     <td class="table-action">
-                                                        <a href="@Url.Action("Details", new { id = item.ArtistId })" class="action-icon"><i class="mdi mdi-eye"></i></a>
                                                         <a href="@Url.Action("Edit", new { id = item.ArtistId })" class="action-icon"><i class="mdi mdi-square-edit-outline"></i></a>
                                                         <a href="@Url.Action("Delete", new { id = item.ArtistId })" class="action-icon"><i class="mdi mdi-delete"></i></a>
                                                     </td>
@@ -409,15 +408,14 @@
     <!-- Theme Settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
         <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
-            <h5 class="text-white m-0">Theme Settings</h5>
+            <h5 class="text-white m-0">Cài đặt chủ đề</h5>
             <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body p-0">
             <div data-simplebar class="h-100">
                 <div class="card mb-0 p-3">
-                    <!----
-                    <h5 class="mt-0 font-16 fw-bold mb-3">Choose Layout</h5>
+                    <!-- <h5 class="mt-0 font-16 fw-bold mb-3">Chọn Layout</h5>
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check card-radio">
@@ -441,7 +439,7 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="font-14 text-center text-muted mt-2">Vertical</h5>
+                            <h5 class="font-14 text-center text-muted mt-2">Ngang</h5>
                         </div>
                         <div class="col-4">
                             <div class="form-check card-radio">
@@ -459,11 +457,11 @@
                                     </span>
                                 </label>
                             </div>
-                            <h5 class="font-14 text-center text-muted mt-2">Horizontal</h5>
+                            <h5 class="font-14 text-center text-muted mt-2">Dọc</h5>
                         </div>
-                    </div>
-                        ----->
-                    <h5 class="my-3 font-16 fw-bold">Color Scheme</h5>
+                    </div> -->
+
+                    <h5 class="mt-0 my-3 font-16 fw-bold">Màu nền</h5>
 
                     <div class="colorscheme-cardradio">
                         <div class="row">
@@ -506,7 +504,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Light</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Sáng</h5>
                             </div>
 
                             <div class="col-4">
@@ -546,13 +544,13 @@
                                         </div>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Dark</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Tối</h5>
                             </div>
                         </div>
                     </div>
 
                     <div id="layout-width">
-                        <h5 class="my-3 font-16 fw-bold">Layout Mode</h5>
+                        <h5 class="my-3 font-16 fw-bold">Layout</h5>
 
                         <div class="row">
                             <div class="col-4">
@@ -592,46 +590,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Fluid</h5>
-                            </div>
-                            <div class="col-4" id="layout-boxed">
-                                <div class="form-check card-radio">
-                                    <input class="form-check-input" type="radio" name="data-layout-mode" id="layout-mode-boxed" value="boxed">
-                                    <label class="form-check-label p-0 avatar-md w-100 px-2" for="layout-mode-boxed">
-                                        <div id="sidebar-size" class="border-start border-end">
-                                            <span class="d-flex h-100">
-                                                <span class="flex-shrink-0">
-                                                    <span class="bg-light d-flex h-100 border-end flex-column p-1 px-2">
-                                                        <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                        <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    </span>
-                                                </span>
-                                                <span class="flex-grow-1">
-                                                    <span class="d-flex h-100 flex-column rounded-2">
-                                                        <span class="bg-light d-block p-1"></span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </div>
-
-                                        <div id="topnav-color" class="border-start border-end h-100">
-                                            <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
-                                                    <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                </span>
-                                                <span class="bg-light d-block p-1"></span>
-                                            </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Boxed</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Gắn liền</h5>
                             </div>
 
                             <div class="col-4" id="layout-detached">
@@ -660,12 +619,12 @@
 
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Detached</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Tách rời</h5>
                             </div>
                         </div>
                     </div>
 
-                    <h5 class="my-3 font-16 fw-bold">Topbar Color</h5>
+                    <h5 class="my-3 font-16 fw-bold">Màu topbar</h5>
 
                     <div class="row">
                         <div class="col-4">
@@ -705,7 +664,7 @@
                                     </div>
                                 </label>
                             </div>
-                            <h5 class="font-14 text-center text-muted mt-2">Light</h5>
+                            <h5 class="font-14 text-center text-muted mt-2">Sáng</h5>
                         </div>
 
                         <div class="col-4" style="--ct-dark-rgb: 64,73,84;">
@@ -745,52 +704,12 @@
                                     </div>
                                 </label>
                             </div>
-                            <h5 class="font-14 text-center text-muted mt-2">Dark</h5>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="form-check card-radio">
-                                <input class="form-check-input" type="radio" name="data-topbar-color" id="topbar-color-brand" value="brand">
-                                <label class="form-check-label p-0 avatar-md w-100" for="topbar-color-brand">
-                                    <div id="sidebar-size">
-                                        <span class="d-flex h-100">
-                                            <span class="flex-shrink-0">
-                                                <span class="bg-light d-flex h-100 border-end  flex-column p-1 px-2">
-                                                    <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex-grow-1">
-                                                <span class="d-flex h-100 flex-column">
-                                                    <span class="bg-primary bg-gradient d-block p-1"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </div>
-
-                                    <div id="topnav-color">
-                                        <span class="d-flex h-100 flex-column">
-                                            <span class="bg-primary bg-gradient d-flex p-1 align-items-center border-bottom border-secondary border-opacity-25">
-                                                <span class="d-block p-1 bg-light opacity-25 rounded me-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-auto"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
-                                                <span class="d-block border border-3 border opacity-25 rounded ms-1"></span>
-                                            </span>
-                                            <span class="bg-light d-block p-1"></span>
-                                        </span>
-                                    </div>
-                                </label>
-                            </div>
-                            <h5 class="font-14 text-center text-muted mt-2">Brand</h5>
+                            <h5 class="font-14 text-center text-muted mt-2">Tối</h5>
                         </div>
                     </div>
 
                     <div>
-                        <h5 class="my-3 font-16 fw-bold">Menu Color</h5>
+                        <h5 class="my-3 font-16 fw-bold">Màu menu</h5>
 
                         <div class="row">
                             <div class="col-4">
@@ -830,7 +749,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Light</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Sáng</h5>
                             </div>
 
                             <div class="col-4" style="--ct-dark-rgb: 64,73,84;">
@@ -870,53 +789,13 @@
                                         </div>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Dark</h5>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-menu-color" id="leftbar-color-brand" value="brand">
-                                    <label class="form-check-label p-0 avatar-md w-100" for="leftbar-color-brand">
-                                        <div id="sidebar-size">
-                                            <span class="d-flex h-100">
-                                                <span class="flex-shrink-0">
-                                                    <span class="bg-primary bg-gradient d-flex h-100 flex-column p-1 px-2">
-                                                        <span class="d-block p-1 bg-light-lighten rounded mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                        <span class="d-block border opacity-25 rounded border-3 w-100 mb-1"></span>
-                                                    </span>
-                                                </span>
-                                                <span class="flex-grow-1">
-                                                    <span class="d-flex h-100 flex-column">
-                                                        <span class="bg-light d-block p-1"></span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </div>
-
-                                        <div id="topnav-color">
-                                            <span class="d-flex h-100 flex-column">
-                                                <span class="bg-light d-flex p-1 align-items-center border-bottom border-secondary">
-                                                    <span class="d-block p-1 bg-dark-lighten rounded me-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-auto"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded ms-1"></span>
-                                                </span>
-                                                <span class="bg-primary bg-gradient d-block p-1"></span>
-                                            </span>
-                                        </div>
-
-                                    </label>
-                                </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Brand</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Tối</h5>
                             </div>
                         </div>
                     </div>
 
                     <div id="sidebar-size">
-                        <h5 class="my-3 font-16 fw-bold">Sidebar Size</h5>
+                        <h5 class="my-3 font-16 fw-bold">Kích thước sidebar</h5>
 
                         <div class="row">
                             <div class="col-4">
@@ -941,7 +820,7 @@
                                         </span>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Default</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Mặc định</h5>
                             </div>
 
                             <div class="col-4">
@@ -966,57 +845,7 @@
                                         </span>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Compact</h5>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-small" value="condensed">
-                                    <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-small">
-                                        <span class="d-flex h-100">
-                                            <span class="flex-shrink-0">
-                                                <span class="bg-light d-flex h-100 border-end flex-column" style="padding: 2px;">
-                                                    <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex-grow-1">
-                                                <span class="d-flex h-100 flex-column">
-                                                    <span class="bg-light d-block p-1"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Condensed</h5>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-check sidebar-setting card-radio">
-                                    <input class="form-check-input" type="radio" name="data-sidenav-size" id="leftbar-size-small-hover" value="sm-hover">
-                                    <label class="form-check-label p-0 avatar-md w-100" for="leftbar-size-small-hover">
-                                        <span class="d-flex h-100">
-                                            <span class="flex-shrink-0">
-                                                <span class="bg-light d-flex h-100 border-end flex-column" style="padding: 2px;">
-                                                    <span class="d-block p-1 bg-dark-lighten rounded mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                    <span class="d-block border border-3 border-secondary border-opacity-25 rounded w-100 mb-1"></span>
-                                                </span>
-                                            </span>
-                                            <span class="flex-grow-1">
-                                                <span class="d-flex h-100 flex-column">
-                                                    <span class="bg-light d-block p-1"></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Hover View</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Tối giản</h5>
                             </div>
 
                             <div class="col-4">
@@ -1037,7 +866,7 @@
                                         </span>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Full Layout</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Bố cục đầy đủ</h5>
                             </div>
 
                             <div class="col-4">
@@ -1053,26 +882,14 @@
                                         </span>
                                     </label>
                                 </div>
-                                <h5 class="font-14 text-center text-muted mt-2">Fullscreen Layout</h5>
+                                <h5 class="font-14 text-center text-muted mt-2">Bố cục toàn màn hình</h5>
                             </div>
-                        </div>
-                    </div>
-
-                    <div id="layout-position">
-                        <h5 class="my-3 font-16 fw-bold">Layout Position</h5>
-
-                        <div class="btn-group radio" role="group">
-                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed" value="fixed">
-                            <label class="btn btn-soft-primary w-sm" for="layout-position-fixed">Fixed</label>
-
-                            <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-scrollable" value="scrollable">
-                            <label class="btn btn-soft-primary w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
                         </div>
                     </div>
 
                     <div id="sidebar-user">
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <label class="font-16 fw-bold m-0" for="sidebaruser-check">Sidebar User Info</label>
+                            <label class="font-16 fw-bold m-0" for="sidebaruser-check">Hiện thị tên người dùng</label>
                             <div class="form-check form-switch">
                                 <input type="checkbox" class="form-check-input" name="sidebar-user" id="sidebaruser-check">
                             </div>
@@ -1084,17 +901,10 @@
 
         </div>
         <div class="offcanvas-footer border-top p-3 text-center">
-            <div class="row">
-                <div class="col-6">
-                    <button type="button" class="btn btn-light w-100" id="reset-layout">Reset</button>
-                </div>
-                <div class="col-6">
-                    <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/" target="_blank" role="button" class="btn btn-primary w-100">Buy Now</a>
-                </div>
-            </div>
+            <button type="button" class="btn btn-light w-100" id="reset-layout">Khôi phục về mặc định</button>
         </div>
     </div>
-
+    <!-- end Theme Settings -->
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
